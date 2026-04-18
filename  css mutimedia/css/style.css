@@ -1,0 +1,312 @@
+  /* ============================================
+
+CSS FUNDAMENTALS — PROFILE CARD
+
+ITE 170 — Multimedia & Web Development
+
+============================================ */
+
+
+/* RESET — remove default browser spacing */
+
+*, *::before, *::after {
+
+  margin: 0;
+  
+  padding: 0;
+  
+  box-sizing: border-box;
+  
+  }
+  
+  
+  /* CENTER EVERYTHING ON THE PAGE */
+  
+  body {
+  
+  font-family: Arial, sans-serif;
+  
+  background: #0a0a0a;
+  
+  color: #f5f5f7;
+  
+  min-height: 100vh;
+  
+  display: flex;
+  
+  align-items: center;
+  
+  justify-content: center;
+  
+  padding: 20px;
+  
+  background-image: radial-gradient(
+  
+  rgba(191, 90, 242, 0.08) 1px,
+  
+  transparent 1px
+  
+  );
+  
+  background-size: 20px 20px;
+  
+  }
+   
+  
+  
+  /* THE CARD */
+  
+  .card {
+  
+  width: 360px;
+  
+  max-width: 100%;
+  
+  background:linear-gradient(rgb(220, 140, 153) ,rgb(91, 4, 91));
+  
+  border-radius: 24px;
+  
+  overflow: hidden;
+  
+  box-shadow: 0 20px 60px rgba(19, 18, 18, 0.5);
+  
+  text-align: center;
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  }
+  
+  
+  .card:hover {
+  
+  transform: translateY(-12px);
+  box-shadow: 0 50px 90px rgba(253, 3, 169, 0.77);
+  animation:infinite 2s;
+  
+  }
+  
+  
+  /* COVER BANNER — gradient background */
+  
+  .cover {
+  
+  height: 120px;
+  
+  background: linear-gradient(135deg, #f60280bf, #d390ca);
+  
+  }
+  
+  
+  /* AVATAR — overlaps the cover */
+  
+  .avatar {
+  
+  width: 90px;
+  
+  height: 90px;
+  
+  background: #2c2c2e;
+  
+  border-radius: 50%;
+  
+  border: 4px solid #1c1c1e;
+  
+  margin: -45px auto 0;
+  
+  display: flex;
+  
+  align-items: center;
+  
+  justify-content: center;
+  
+  overflow: hidden;
+  
+  }
+  
+  
+  
+  .avatar-emoji img {
+  
+  width: 100%;
+  
+  height: 100%;
+  
+  object-fit: cover;
+  
+  border-radius: 50%;
+  
+  }
+  
+  
+  .avatar-emoji {
+  
+  font-size: 1.5rem;
+  
+  }
+  
+  
+  /* USER INFO */
+  
+  .info {
+  
+  padding: 16px 24px;
+  
+  }
+  
+  
+  .name {
+  
+  font-size: 1.3rem;
+  
+  font-weight: 700;
+  
+  margin-bottom: 2px;
+  
+  }
+  
+  
+  .title {
+  
+  font-size: 0.85rem;
+  
+  color: hsl(309, 90%, 72%);
+  
+  font-weight: 600;
+  
+  margin-bottom: 10px;
+  
+  }
+  
+  
+  .bio {
+  
+  font-size: 0.82rem;
+  
+  color: #93939c;
+  
+  line-height: 1.5;
+  
+  }
+  
+  
+  /* FOLLOW BUTTON */
+  
+  .follow-butn {
+  
+  margin-top: 14px;
+  
+  padding: 10px 32px;
+  
+  background: #e663ba;
+  
+  color: #fff;
+  
+  border: none;
+  
+  border-radius: 20px;
+  
+  font-size: 0.85rem;
+  
+  font-weight: 600;
+  
+  cursor: pointer;
+  
+  transition: background 0.2s, transform 0.2s;
+  
+  }
+  
+  
+  .follow-butn:hover {
+  
+  background: #ef007f;
+  
+  transform: scale(1.05);
+  
+  }
+  
+  
+  /* STATS ROW — Flexbox layout */
+  
+  .stats {
+  
+  display: flex;
+  
+  justify-content: space-around;
+  
+  padding: 20px 24px;
+  
+  border-top: 1px solid rgba(71, 61, 61, 0.06);
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  
+  }
+  
+  
+  /* EACH STAT — stacked number + label */
+  
+  .stat {
+  
+  display: flex;
+  
+  flex-direction: column;
+  
+  align-items: center;
+  
+  gap: 2px;
+  
+  }
+  
+  
+  .stat-number {
+  
+  font-size: 1.1rem;
+  
+  font-weight: 700;
+  
+  }
+  
+  
+  .stat-label {
+  
+  font-size: 0.7rem;
+  
+  color: #868691;
+  
+  text-transform: uppercase;
+  
+  letter-spacing: 0.05em;
+  
+  }
+  
+  
+  /* SOCIAL LINKS ROW */
+  
+  .socials {
+    display: flex;
+    gap: 10px; /* space between icons */
+    padding: 20px 24px 24px;
+    justify-content: center;
+}
+
+.socials .social-btn img {
+    width: 40px;             /* smaller icon size */
+    height: 40px;
+    border-radius: 50%;     
+    object-fit: cover;
+    transition: transform 0.3s;
+    align-items: center;
+    background: transparent;
+    
+}
+
+  
+  /* HOVER STATE */
+  
+  .social-btn img:hover {
+  
+  background: rgba(203, 28, 89, 0.2);
+  
+  transform: translateY(-2px);
+  
+  }
+  
